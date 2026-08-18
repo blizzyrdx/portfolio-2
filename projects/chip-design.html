@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FPGA, Verilog, and RISC-V digital design project by Kirk Ventura.">
+  <title>RISC-V & FPGA Chip Design | Kirk Ventura</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body class="project-page">
+  <header class="site-header">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">KV</span>
+      <span>Kirk Ventura</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+      <a class="nav-cta" href="../resume.html">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-hero shell">
+      <a class="breadcrumb" href="../index.html#work">← All projects</a>
+      <p class="eyebrow">Digital Design / Computer Architecture</p>
+      <h1>RISC-V & FPGA Chip Design</h1>
+      <p class="project-lede">A bottom-up path from small Verilog modules and testbenches to FPGA prototypes and a custom RISC-V management processor.</p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <span class="meta-label">Focus</span>
+          <span class="meta-value">RTL + Architecture</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Verilog · Vivado · GTKWave</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Status</span>
+          <span class="meta-value">Active learning</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-body shell">
+      <div class="content-grid">
+        <aside class="side-title">
+          <p class="eyebrow">Case study</p>
+          <h2>From RTL to processor</h2>
+        </aside>
+
+        <article class="prose">
+          
+<h2>Learning digital design from the bottom up</h2>
+<p>
+  This project starts with intentionally small RTL blocks—counters, registers,
+  combinational logic, state machines, and testbenches—before combining those
+  fundamentals into a processor architecture.
+</p>
+
+<div class="media-placeholder">
+  <div>
+    <strong>Add a waveform, block diagram, or FPGA photo here</strong>
+    Great options are a GTKWave capture, Vivado schematic, or your Basys 3 board.
+  </div>
+</div>
+
+<h2>Verification first</h2>
+<p>
+  Each module is paired with a testbench so behavior can be verified before moving to
+  hardware. Simulation and waveform inspection make timing, reset behavior, state
+  transitions, and interface assumptions visible before FPGA synthesis.
+</p>
+
+<h2>FPGA prototyping</h2>
+<p>
+  The design flow then moves into Vivado and an Artix-7 FPGA board. Constraints map
+  logical Verilog ports to physical package pins and define the I/O electrical
+  standard, allowing small modules to be validated against switches, LEDs, clocks,
+  and eventually more complex peripherals.
+</p>
+
+<h2>Long-term architecture</h2>
+<p>
+  The larger goal is a custom RISC-V-based management processor developed through
+  Verilog, assembly programs, simulation, FPGA verification, and progressively more
+  complete CPU subsystems. This project is also my bridge into deeper computer
+  architecture topics such as pipelines, memory systems, buses, instruction sets,
+  and SoC design.
+</p>
+
+
+          <div class="link-row">
+            <a class="button button-primary" href="https://github.com/blizzyrdx/Chip-Design" target="_blank" rel="noreferrer">Project repository ↗</a>
+            <a class="button button-secondary" href="../index.html#contact">Contact me</a>
+          </div>
+
+          <a class="next-project" href="phone.html">
+            <span>Next project</span>
+            <strong>Cyberdeck → Custom Phone →</strong>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <p>© 2026 Kirk Ventura</p>
+    <p>HTML + CSS only.</p>
+  </footer>
+</body>
+</html>

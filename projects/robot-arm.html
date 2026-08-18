@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Six-degree-of-freedom robotic arm project by Kirk Ventura.">
+  <title>6-DOF Robotic Arm | Kirk Ventura</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body class="project-page">
+  <header class="site-header">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">KV</span>
+      <span>Kirk Ventura</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+      <a class="nav-cta" href="../resume.html">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-hero shell">
+      <a class="breadcrumb" href="../index.html#work">← All projects</a>
+      <p class="eyebrow">Robotics / Mechanical CAD / Embedded</p>
+      <h1>6-DOF Robotic Arm</h1>
+      <p class="project-lede">A mechatronics project combining mechanical CAD, actuator sizing, embedded electronics, servo calibration, and C++ control.</p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <span class="meta-label">Focus</span>
+          <span class="meta-value">Mechatronics</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Onshape · C++ · CMake</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Status</span>
+          <span class="meta-value">Prototype</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-body shell">
+      <div class="content-grid">
+        <aside class="side-title">
+          <p class="eyebrow">Case study</p>
+          <h2>Mechanical + electrical integration</h2>
+        </aside>
+
+        <article class="prose">
+          
+<h2>System goal</h2>
+<p>
+  The arm was built as a full mechatronics exercise: create the mechanical geometry,
+  determine actuator requirements, wire the electronics, and then write the software
+  needed to command and calibrate each joint.
+</p>
+
+<div class="media-placeholder">
+  <div>
+    <strong>Add your arm photo or Onshape screenshot here</strong>
+    A clean CAD render works especially well as the first visual on this page.
+  </div>
+</div>
+
+<h2>Mechanical engineering</h2>
+<p>
+  The design work included custom Onshape CAD, a six-degree-of-freedom joint layout,
+  torque calculations, servo selection, clearances, mounting geometry, and iterative
+  prototyping. That mechanical work informed the electrical and control requirements
+  instead of being designed separately.
+</p>
+
+<h2>Embedded control</h2>
+<p>
+  I used C++ to command the servos and iteratively calibrated each joint around the
+  real physical assembly. The project also became a useful testbed for thinking about
+  safe startup positions, power-supply limits, servo current draw, serial control,
+  and the difference between commanded angle and physical mechanism angle.
+</p>
+
+<h2>3D model</h2>
+<div class="embed-wrap">
+  <iframe
+    title="Robotic arm 3D model placeholder"
+    srcdoc="<!doctype html><html><body style='margin:0;background:#111417;color:#a6adb4;font-family:Arial,sans-serif;display:grid;place-items:center;height:100vh;text-align:center'><div><b style='color:#f3f4f5'>ONSHAPE / SKETCHFAB EMBED</b><br><br>Replace srcdoc with your public iframe URL.</div></body></html>">
+  </iframe>
+</div>
+
+<h2>Next iteration</h2>
+<p>
+  Future versions can move from direct position commands toward higher-level motion:
+  inverse kinematics, trajectory generation, closed-loop feedback, and eventually
+  computer-vision-assisted manipulation.
+</p>
+
+
+          <div class="link-row">
+            <a class="button button-primary" href="https://github.com/blizzyrdx" target="_blank" rel="noreferrer">Project repository ↗</a>
+            <a class="button button-secondary" href="../index.html#contact">Contact me</a>
+          </div>
+
+          <a class="next-project" href="chip-design.html">
+            <span>Next project</span>
+            <strong>RISC-V & FPGA Design →</strong>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <p>© 2026 Kirk Ventura</p>
+    <p>HTML + CSS only.</p>
+  </footer>
+</body>
+</html>

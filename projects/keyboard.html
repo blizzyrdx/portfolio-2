@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Custom keyboard PCB design case study by Kirk Ventura.">
+  <title>Custom Mechanical Keyboard | Kirk Ventura</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body class="project-page">
+  <header class="site-header">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">KV</span>
+      <span>Kirk Ventura</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+      <a class="nav-cta" href="../resume.html">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-hero shell">
+      <a class="breadcrumb" href="../index.html#work">← All projects</a>
+      <p class="eyebrow">PCB Design / Embedded Hardware</p>
+      <h1>Custom Mechanical Keyboard</h1>
+      <p class="project-lede">A from-scratch keyboard used to learn how real hardware decisions move from datasheet to schematic, PCB, enclosure, and manufactured board.</p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <span class="meta-label">Focus</span>
+          <span class="meta-value">PCB + Embedded</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">KiCad · Onshape · USB-C</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Status</span>
+          <span class="meta-value">In development</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-body shell">
+      <div class="content-grid">
+        <aside class="side-title">
+          <p class="eyebrow">Case study</p>
+          <h2>From schematic to board</h2>
+        </aside>
+
+        <article class="prose">
+          
+<h2>Why I built it</h2>
+<p>
+  I wanted a PCB project that forced me to work through the entire hardware-design
+  process rather than treating the microcontroller as a black box. The keyboard
+  became a platform for learning <strong>datasheets, USB-C, power distribution,
+  decoupling, ESD protection, matrix scanning, PCB layout, and DFM</strong>.
+</p>
+
+<div class="media-placeholder">
+  <div>
+    <strong>Replace this with your KiCad render or PCB photo</strong>
+    Put your image in <code>assets/images/</code>, then replace this block with:
+    <code>&lt;img src="../assets/images/keyboard.jpg" alt="Custom keyboard PCB"&gt;</code>
+  </div>
+</div>
+
+<h2>Electrical design</h2>
+<p>
+  The board is organized around an ATmega32U4 and a USB-C device connection. The
+  design includes the switch matrix and diodes, CC pull-down resistors, USB data
+  routing, protection components, clock circuitry, local bypass capacitors, and a
+  two-layer PCB stackup.
+</p>
+<ul>
+  <li>USB-C device-side CC configuration and power entry.</li>
+  <li>D+ / D− differential routing with attention to symmetry and return paths.</li>
+  <li>16 MHz clock circuitry placed close to the MCU.</li>
+  <li>Decoupling capacitors placed at MCU supply pins.</li>
+  <li>Switch matrix routing to reduce the required GPIO count.</li>
+</ul>
+
+<h2>3D model</h2>
+<p>
+  Interactive 3D viewers such as Sketchfab or an Onshape public embed can be placed
+  on a static site with an <strong>iframe</strong>. The iframe itself is HTML; the
+  third-party host provides the viewer.
+</p>
+
+<div class="embed-wrap">
+  <iframe
+    title="Keyboard 3D model placeholder"
+    srcdoc="<!doctype html><html><body style='margin:0;background:#111417;color:#a6adb4;font-family:Arial,sans-serif;display:grid;place-items:center;height:100vh;text-align:center'><div><b style='color:#f3f4f5'>3D MODEL EMBED</b><br><br>Replace the iframe srcdoc attribute with<br>src=&quot;YOUR_ONSHAPE_OR_SKETCHFAB_EMBED_URL&quot;</div></body></html>">
+  </iframe>
+</div>
+
+<h2>What I learned</h2>
+<p>
+  The biggest takeaway was learning to turn a datasheet into design decisions:
+  identifying mandatory support circuitry, distinguishing recommendations from
+  requirements, calculating pull resistors where needed, placing bypass capacitors,
+  and then checking the implementation against a typical application circuit.
+</p>
+
+
+          <div class="link-row">
+            <a class="button button-primary" href="https://github.com/blizzyrdx" target="_blank" rel="noreferrer">Project repository ↗</a>
+            <a class="button button-secondary" href="../index.html#contact">Contact me</a>
+          </div>
+
+          <a class="next-project" href="robot-arm.html">
+            <span>Next project</span>
+            <strong>6-DOF Robotic Arm →</strong>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <p>© 2026 Kirk Ventura</p>
+    <p>HTML + CSS only.</p>
+  </footer>
+</body>
+</html>

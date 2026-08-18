@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Embedded Linux cyberdeck and custom phone systems project by Kirk Ventura.">
+  <title>Cyberdeck → Custom Phone | Kirk Ventura</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body class="project-page">
+  <header class="site-header">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark">KV</span>
+      <span>Kirk Ventura</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+      <a class="nav-cta" href="../resume.html">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-hero shell">
+      <a class="breadcrumb" href="../index.html#work">← All projects</a>
+      <p class="eyebrow">Embedded Systems / Linux / Hardware</p>
+      <h1>Cyberdeck → Custom Phone</h1>
+      <p class="project-lede">A staged project that uses a Raspberry Pi cyberdeck to learn the systems required for the larger goal: designing a phone from the hardware up.</p>
+
+      <div class="project-meta">
+        <div class="meta-item">
+          <span class="meta-label">Focus</span>
+          <span class="meta-value">Embedded Systems</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Linux · C++ · KiCad</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Status</span>
+          <span class="meta-value">In development</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-body shell">
+      <div class="content-grid">
+        <aside class="side-title">
+          <p class="eyebrow">Case study</p>
+          <h2>A phone as a systems project</h2>
+        </aside>
+
+        <article class="prose">
+          
+<h2>Why start with a cyberdeck?</h2>
+<p>
+  A complete phone is a system-of-systems problem. Starting with a Raspberry Pi-based
+  cyberdeck provides a practical environment for learning Linux, displays, device
+  interfaces, power, sensors, thermal management, and application-level software
+  before attempting custom compute hardware.
+</p>
+
+<div class="media-placeholder">
+  <div>
+    <strong>Add a system diagram or cyberdeck photo here</strong>
+    A labeled architecture diagram would make this page especially strong.
+  </div>
+</div>
+
+<h2>Hardware-management layer</h2>
+<p>
+  The custom hardware roadmap includes battery monitoring, power regulation, sensor
+  interfaces, communication protocols, and closed-loop thermal control. Those
+  subsystems can be prototyped independently and then consolidated onto a custom PCB.
+</p>
+
+<h2>Compute roadmap</h2>
+<p>
+  In parallel, the FPGA and RISC-V work develops the digital-design knowledge needed
+  to understand what sits below the operating system. The point is not to pretend a
+  first prototype can replace a commercial smartphone SoC; it is to build the skills
+  required to reason about each layer of the stack.
+</p>
+
+<h2>End state</h2>
+<p>
+  The long-term project is a custom phone that combines mechanical enclosure design,
+  display and user input, embedded power electronics, communications, a management
+  controller, Linux-based software, and increasingly custom compute hardware.
+</p>
+
+
+          <div class="link-row">
+            <a class="button button-primary" href="https://github.com/blizzyrdx" target="_blank" rel="noreferrer">Project repository ↗</a>
+            <a class="button button-secondary" href="../index.html#contact">Contact me</a>
+          </div>
+
+          <a class="next-project" href="keyboard.html">
+            <span>Next project</span>
+            <strong>Custom Mechanical Keyboard →</strong>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <p>© 2026 Kirk Ventura</p>
+    <p>HTML + CSS only.</p>
+  </footer>
+</body>
+</html>
