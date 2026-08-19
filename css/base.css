@@ -5,10 +5,9 @@
   --text: #f3f4f5;
   --muted: #a6adb4;
   --line: #2b3035;
-  --accent: #ff6a3d;
-  --accent-soft: #ffb19a;
-  --max: 1180px;
-  --radius: 22px;
+
+  --accent: #3b82f6;
+  --accent-soft: #93c5fd;
 }
 
 * {
