@@ -59,18 +59,14 @@
 <p>
   I wanted a PCB project that forced me to work through the entire hardware-design
   process rather than treating the microcontroller as a black box. The keyboard
-  became a platform for learning <strong>datasheets, USB-C, power distribution,
-  decoupling, ESD protection, matrix scanning, PCB layout, and DFM</strong>.
+  became a platform for learning how to tackle<strong>datasheets, PCB components, power distribution,
+  capacitor decoupling, layer stackup, and preventing noise/EMI</strong>.
 </p>
 
 <figure class="project-image-block">
   <img
     src="../assets/images/IMG_1582.jpeg"
     alt="Custom mechanical keyboard PCB and enclosure">
-
-  <figcaption>
-    Physical prototype of my custom mechanical keyboard PCB and enclosure.
-  </figcaption>
 </figure>
 
 <h2>Electrical design</h2>
@@ -88,17 +84,18 @@
   <li>Switch matrix routing to reduce the required GPIO count.</li>
 </ul>
 
-<h2>3D model</h2>
+<h2>3D Model</h2>
+
 <p>
-  Interactive 3D viewers such as Sketchfab or an Onshape public embed can be placed
-  on a static site with an <strong>iframe</strong>. The iframe itself is HTML; the
-  third-party host provides the viewer.
+  I designed the mechanical enclosure and component layout in OnShape then 3D printed it to ensure
+  proper fitment between the PCB, switches, USB-C connector, and outer case.
 </p>
 
 <div class="embed-wrap">
   <iframe
-    title="Keyboard 3D model placeholder"
-    srcdoc="<!doctype html><html><body style='margin:0;background:#111417;color:#a6adb4;font-family:Arial,sans-serif;display:grid;place-items:center;height:100vh;text-align:center'><div><b style='color:#f3f4f5'>3D MODEL EMBED</b><br><br>Replace the iframe srcdoc attribute with<br>src=&quot;YOUR_ONSHAPE_OR_SKETCHFAB_EMBED_URL&quot;</div></body></html>">
+    src="IMG_1585 2.jpeg"
+    title="Interactive 3D model of custom mechanical keyboard"
+    allowfullscreen>
   </iframe>
 </div>
 
@@ -112,8 +109,7 @@
 
 
           <div class="link-row">
-            <a class="button button-primary" href="https://github.com/blizzyrdx" target="_blank" rel="noreferrer">Project repository ↗</a>
-            <a class="button button-secondary" href="../index.html#contact">Contact me</a>
+            <a class="button button-primary" href="https://docs.google.com/document/d/16t2IJ8sU-0RRLxsY1AmvW_do38qPDFGtQJbIkIZJJeQ/edit?usp=sharing" target="_blank" rel="noreferrer">Engineering Notebook ↗</a>
           </div>
 
           <a class="next-project" href="robot-arm.html">
@@ -127,7 +123,6 @@
 
   <footer class="footer shell">
     <p>© 2026 Kirk Ventura</p>
-    <p>HTML + CSS only.</p>
   </footer>
 </body>
 </html>
