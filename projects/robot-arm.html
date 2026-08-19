@@ -70,19 +70,10 @@
   instead of being designed separately.
 </p>
 
-<h2>Embedded control</h2>
-<p>
-  I used C++ to command the servos and iteratively calibrated each joint around the
-  real physical assembly. The project also became a useful testbed for thinking about
-  safe startup positions, power-supply limits, servo current draw, serial control,
-  and the difference between commanded angle and physical mechanism angle.
-</p>
-
 <h2>Next iteration</h2>
 <p>
-  Future versions can move from direct position commands toward higher-level motion:
-  inverse kinematics, trajectory generation, closed-loop feedback, and eventually
-  computer-vision-assisted manipulation.
+  For Version 2.0, I plan to add a custom PCB for the servo control and power distribution, as well as a more robust mechanical design with better cable management and improved joint strength. 
+  After this, I will explore adding sensors for feedback control and possibly integrating computer vision for autonomous operation through the Raspberry Pi 5 camera and machine learning.
 </p>
 
           <a class="next-project" href="chip-design.html">
@@ -96,7 +87,6 @@
 
   <footer class="footer shell">
     <p>© 2026 Kirk Ventura</p>
-    <p>HTML + CSS only.</p>
   </footer>
 </body>
 </html>
