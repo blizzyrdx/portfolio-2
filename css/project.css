@@ -203,3 +203,22 @@ body.project-page {
     min-height: 320px;
   }
 }
+
+.project-image-block {
+  margin: 34px 0;
+}
+
+.project-image-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.project-image-block figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
