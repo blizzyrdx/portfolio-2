@@ -67,8 +67,8 @@
 
 .pcb-visual {
   background-image:
-    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   background-size: 26px 26px;
 }
 
@@ -210,9 +210,44 @@
   font-size: 0.85rem;
 }
 
+
+/* =========================================
+   PROJECT PHOTOS
+   ========================================= */
+
+.project-photo {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-photo::before,
+.project-photo::after {
+  display: none;
+}
+
+.project-photo img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================
+   TABLETS / SMALL LAPTOPS
+   ========================================= */
+
 @media (max-width: 850px) {
+
   .site-header {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .nav {
@@ -238,87 +273,312 @@
     grid-column: 1;
   }
 
+
+  /* Project cards stack vertically */
+
+  .project-card {
+    min-height: 0;
+  }
+
   .project-card:nth-child(even) .project-visual {
     order: 0;
   }
 
   .project-visual,
   .project-card:nth-child(even) .project-visual {
+    min-height: 420px;
     border: 0;
     border-bottom: 1px solid var(--line);
   }
 
   .project-content {
-    min-height: 390px;
+    min-height: 0;
+    padding: 42px;
+  }
+
+  .project-content h3 {
+    font-size: clamp(2.2rem, 7vw, 3.5rem);
+  }
+
+
+  /* About / statement */
+
+  .statement-grid,
+  .two-column {
+    gap: 48px;
+  }
+
+  .statement {
+    padding: 90px 0;
+  }
+
+
+  /* Contact */
+
+  .contact {
+    padding: 100px 0 120px;
   }
 }
 
+
+/* =========================================
+   MOBILE PHONES
+   ========================================= */
+
 @media (max-width: 560px) {
+
+  /* Overall width */
+
   .shell,
   .site-header {
-    width: min(calc(100% - 26px), var(--max));
+    width: min(calc(100% - 28px), var(--max));
   }
+
+
+  /* Header */
 
   .site-header {
     position: static;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .brand {
+    flex-shrink: 0;
+    font-size: 0.9rem;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
   }
 
   .nav {
-    justify-content: flex-start;
-    margin-top: 16px;
-    font-size: 0.82rem;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 0;
+    font-size: 0.8rem;
   }
 
   .nav-cta {
     padding: 6px 10px;
   }
 
+
+  /* Hero */
+
   .hero {
-    padding-top: 72px;
+    min-height: auto;
+    padding-top: 64px;
+    padding-bottom: 72px;
   }
 
   .hero h1 {
-    font-size: clamp(3rem, 16vw, 4.6rem);
+    max-width: 100%;
+    font-size: clamp(3rem, 15vw, 4.6rem);
+    line-height: 0.93;
+    letter-spacing: -0.065em;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    margin-top: 26px;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .button {
+    min-height: 44px;
+    padding: 0 15px;
+    font-size: 0.88rem;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
   }
 
+
+  /* Sections */
+
   .section,
   .contact {
-    padding-block: 86px;
+    padding-block: 78px;
   }
+
+  .section-heading {
+    display: block;
+    margin-bottom: 34px;
+  }
+
+  .section-heading h2 {
+    margin-top: 8px;
+    font-size: clamp(2.3rem, 11vw, 3.5rem);
+    line-height: 1;
+  }
+
+  .section-heading > p:last-child {
+    margin-top: 18px;
+  }
+
+
+  /* Project cards */
+
+  .project-list {
+    gap: 18px;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    border-radius: 18px;
+  }
+
+  .project-card:nth-child(even) .project-visual {
+    order: 0;
+  }
+
+  .project-visual,
+  .project-card:nth-child(even) .project-visual {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+
+    border: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .project-photo img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .project-content {
+    min-height: 0;
+    padding: 30px 24px;
+  }
+
+  .project-content h3 {
+    margin: 10px 0 16px;
+    font-size: clamp(2rem, 10vw, 2.8rem);
+    line-height: 1.02;
+  }
+
+  .project-content > p:not(.project-number) {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .tag-list {
+    gap: 7px;
+    margin: 22px 0;
+  }
+
+  .tag-list li {
+    padding: 6px 9px;
+    font-size: 0.75rem;
+  }
+
+  .text-link {
+    margin-top: 8px;
+    padding-top: 14px;
+  }
+
+
+  /* Statement / About */
+
+  .statement {
+    padding: 76px 0;
+  }
+
+  .statement-grid,
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .statement h2,
+  .compact h2 {
+    font-size: clamp(2.3rem, 12vw, 3.8rem);
+  }
+
+  .statement-copy,
+  .body-copy {
+    font-size: 1rem;
+  }
+
+
+  /* Contact */
+
+  .contact h2 {
+    font-size: clamp(2.4rem, 12vw, 4rem);
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+
+  /* Footer */
 
   .footer {
     display: block;
+    padding: 24px 0 32px;
+  }
+
+  .footer p {
+    margin: 5px 0;
   }
 }
 
-<!--Project Photo Customization-->
 
-.project-photo {
-  position: relative;
-  padding: 0;
-  overflow: hidden;
-}
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
 
-.project-photo::before,
-.project-photo::after {
-  display: none;
-}
+@media (max-width: 390px) {
 
-.project-photo img {
-  position: absolute;
+  .shell,
+  .site-header {
+    width: calc(100% - 22px);
+  }
 
-  width: 100%;
-  height: 100%;
+  .site-header {
+    align-items: flex-start;
+  }
 
-  inset: 0;
+  .brand {
+    font-size: 0.82rem;
+  }
 
-  display: block;
+  .nav {
+    gap: 8px;
+    font-size: 0.75rem;
+  }
 
-  object-fit: cover;
-  object-position: center;
+  .hero {
+    padding-top: 52px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.7rem, 15vw, 3.7rem);
+  }
+
+  .project-content {
+    padding: 26px 20px;
+  }
+
+  .project-visual,
+  .project-card:nth-child(even) .project-visual {
+    aspect-ratio: 1 / 1;
+  }
 }
