@@ -832,6 +832,9 @@
     margin: 0 !important;
     object-fit: contain !important;
     object-position: center;
+
+    transform: scale(1.15); /* ADD THIS */
+
     opacity: 0 !important;
     visibility: hidden !important;
     transition: opacity 0.6s ease;
