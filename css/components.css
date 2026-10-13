@@ -794,24 +794,124 @@
   opacity: 0.75;
 }
 
-/* Remove decorative blue circles and overlays */
+/* ========================================
+   PERSONAL PHOTO CAROUSEL
+   ======================================== */
+
+/* Single image container */
+#personalCarousel {
+    position: relative !important;
+    display: block !important;
+    width: 100%;
+    height: 420px;
+    min-height: 420px;
+    overflow: hidden !important;
+    background: #10151c;
+    border-radius: 14px;
+    isolation: isolate;
+}
+
+/* Place all slides in one fixed area */
+#personalCarousel .carousel-slides {
+    position: absolute !important;
+    inset: 0;
+    display: block !important;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Hide inactive images */
+#personalCarousel .carousel-slides > img.carousel-slide {
+    position: absolute !important;
+    inset: 0;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    object-fit: contain !important;
+    object-position: center;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.6s ease;
+}
+
+/* Show only active photo */
+#personalCarousel .carousel-slides > img.carousel-slide.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Previous / next arrows */
+#personalCarousel .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#personalCarousel .prev {
+    left: 12px;
+}
+
+#personalCarousel .next {
+    right: 12px;
+}
+
+/* Navigation dots */
+#personalCarousel .carousel-dots {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 8px;
+}
+
+#personalCarousel .carousel-dot {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+#personalCarousel .carousel-dot.active {
+    background: white;
+}
+
+/* Remove decorative overlays */
 #personalCarousel::before,
-#personalCarousel::after,
-#personalCarousel .carousel-slides::before,
-#personalCarousel .carousel-slides::after {
+#personalCarousel::after {
     content: none !important;
     display: none !important;
 }
 
-/* Add spacing above the personal project */
+/* Add space above Other Activities */
 .project-card:has(#personalCarousel) {
     margin-top: 40px;
 }
 
-/* Mobile */
+/* Mobile layout */
 @media (max-width: 700px) {
     #personalCarousel {
-        height: 300px !important;
-        min-height: 300px !important;
+        height: 300px;
+        min-height: 300px;
     }
 }
