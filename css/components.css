@@ -793,3 +793,24 @@
   line-height: 1.6;
   opacity: 0.75;
 }
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    padding: 0;
+}
+
+.carousel-dot.active {
+    background: white;
+    transform: scale(1.25);
+}
+
+@media (max-width: 600px) {
+    .personal-carousel {
+        height: 240px;
+    }
+}
