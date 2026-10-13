@@ -798,17 +798,30 @@
    PERSONAL PHOTO CAROUSEL
    ======================================== */
 
-/* Single image container */
+/* Make carousel fill the entire left column */
+.project-card:has(#personalCarousel) {
+    align-items: stretch;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
 #personalCarousel {
     position: relative !important;
     display: block !important;
     width: 100%;
-    height: 420px;
-    min-height: 420px;
+    height: 100%;
+    min-height: 520px;
     overflow: hidden !important;
     background: #10151c;
-    border-radius: 14px;
+    border-radius: 14px 0 0 14px;
     isolation: isolate;
+    align-self: stretch;
+}
+
+/* Make the photo fill the available height */
+#personalCarousel .carousel-slides > img.carousel-slide {
+    object-fit: cover !important;
+    transform: none !important;
 }
 
 /* Place all slides in one fixed area */
@@ -911,10 +924,10 @@
     margin-top: 40px;
 }
 
-/* Mobile layout */
 @media (max-width: 700px) {
     #personalCarousel {
-        height: 300px;
-        min-height: 300px;
+        height: 360px;
+        min-height: 360px;
+        border-radius: 14px 14px 0 0;
     }
 }
