@@ -794,25 +794,24 @@
   opacity: 0.75;
 }
 
-/* PERSONAL CAROUSEL - FINAL OVERRIDE */
-
-.personal-carousel .carousel-dot.active {
-    background: white;
-}
-
-/* Remove decorative pseudo-elements */
-.personal-carousel::before,
-.personal-carousel::after,
-.personal-carousel .carousel-slides::before,
-.personal-carousel .carousel-slides::after {
+/* Remove decorative blue circles and overlays */
+#personalCarousel::before,
+#personalCarousel::after,
+#personalCarousel .carousel-slides::before,
+#personalCarousel .carousel-slides::after {
     content: none !important;
     display: none !important;
 }
 
+/* Add spacing above the personal project */
+.project-card:has(#personalCarousel) {
+    margin-top: 40px;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
-    .project-card .project-visual.personal-carousel {
-        height: 300px;
-        min-height: 300px;
+    #personalCarousel {
+        height: 300px !important;
+        min-height: 300px !important;
     }
 }

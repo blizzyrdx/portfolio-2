@@ -231,8 +231,26 @@
         </article>
 
             <article class="project-card">
-<div class="project-visual personal-carousel" id="personalCarousel">
-      <div class="carousel-slides">
+.personal-carousel .carousel-dot.active {
+    background: white;
+}
+
+/* Remove decorative pseudo-elements */
+.personal-carousel::before,
+.personal-carousel::after,
+.personal-carousel .carousel-slides::before,
+.personal-carousel .carousel-slides::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .project-card .project-visual.personal-carousel {
+        height: 300px;
+        min-height: 300px;
+    }
+}      <div class="carousel-slides">
         <img src="assets/images/Untitled design.jpeg" class="carousel-slide active" alt="Personal photo 1">
         <img src="assets/images/Untitled design 2.jpeg" class="carousel-slide" alt="Personal photo 2">
         <img src="assets/images/Untitled design 3.jpeg" class="carousel-slide" alt="Personal photo 3">
